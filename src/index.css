@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand and semantic color utilities */
+  --color-just-black: #0e100f;
+  --color-surface-cream: #fffce1;
+  --color-surface-50: #7c7c6f;
+  --color-surface-25: #42433d;
+  --color-off-black: #191919;
+  --color-shockingly-green: #0ae448;
+  --color-light-green: #abff84;
+  --color-orangey: #ff8709;
+  --color-pink: #fec5fb;
+  --color-lilac: #9d95ff;
+  --color-blue: #00bae2;
+  --color-core-green: #dfffd1;
+  --color-lipstick-pink: #f100cb;
+  --color-destructive-coral: #ff938a;
+  --color-transparent: #0e100f00;
+
+  --color-background-page: #0e100f;
+  --color-background-section: #0e100f;
+  --color-surface-card: #0e100f;
+  --color-surface-nested-panel: #191919;
+  --color-surface-footer: #191919;
+  --color-surface-callout: #fffce1;
+  --color-surface-brand-wash: #dfffd1;
+  --color-text-primary: #fffce1;
+  --color-text-secondary: #7c7c6f;
+  --color-text-disabled: #7c7c6f;
+  --color-text-on-callout: #0e100f;
+  --color-text-link: #fffce1;
+  --color-text-link-muted: #7c7c6f;
+  --color-text-link-hover: #fffce1;
+  --color-icon-default: #fffce1;
+  --color-icon-muted: #7c7c6f;
+  --color-border-subtle: #42433d;
+  --color-border-control: #fffce1;
+  --color-action-background: #0e100f00;
+  --color-action-text: #fffce1;
+  --color-accent-brand: #0ae448;
+  --color-accent-link: #abff84;
+  --color-category-gsap: #0ae448;
+  --color-category-other: #abff84;
+  --color-category-svg: #ff8709;
+  --color-category-scroll: #fec5fb;
+  --color-category-text: #9d95ff;
+  --color-category-ui: #00bae2;
+  --color-decoration-gradient-deep: #f100cb;
+  --color-gradient-brand-start: #0ae448;
+  --color-gradient-brand-end: #abff84;
+  --color-action-destructive: #ff938a;
+  --color-action-hover-background: #191919;
+  --color-action-pressed-background: #0e100f;
+  --color-action-disabled-border: #42433d;
+  --color-action-focus-ring: #abff84;
+
+  --color-page: var(--color-background-page);
+  --color-section: var(--color-background-section);
+  --color-card: var(--color-surface-card);
+  --color-panel: var(--color-surface-nested-panel);
+  --color-footer: var(--color-surface-footer);
+  --color-callout: var(--color-surface-callout);
+  --color-brand-wash: var(--color-surface-brand-wash);
+  --color-primary: var(--color-text-primary);
+  --color-secondary: var(--color-text-secondary);
+  --color-disabled: var(--color-text-disabled);
+  --color-on-callout: var(--color-text-on-callout);
+  --color-subtle-border: var(--color-border-subtle);
+  --color-control-border: var(--color-border-control);
+  --color-brand: var(--color-accent-brand);
+  --color-link: var(--color-accent-link);
+  --color-danger: var(--color-action-destructive);
+
+  /* Exact spacing scale and named spacing tokens */
+  --spacing-0: 0px;
+  --spacing-4: 4px;
+  --spacing-6: 6px;
+  --spacing-8: 8px;
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-15: 15px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-60: 60px;
+  --spacing-76: 76px;
+  --spacing-80: 80px;
+  --spacing-96: 96px;
+  --spacing-108: 108px;
+  --spacing-120: 120px;
+  --spacing-element: 16px;
+  --spacing-card-grid: 24px;
+  --spacing-section: 80px;
+  --spacing-section-spacious: 120px;
+  --spacing-navigation: 6px;
+  --spacing-navigation-group: 16px;
+  --spacing-card: 24px;
+  --spacing-button-inline: 24px;
+  --spacing-button-block: 15px;
+  --spacing-navigation-block: 10px;
+  --spacing-icon-button: 0px;
+  --spacing-footer-block-min: 60px;
+  --spacing-footer-block-max: 80px;
+  --spacing-button-content: 8px;
+  --spacing-button-xs-inline: 12px;
+  --spacing-button-sm-inline: 16px;
+  --spacing-button-lg-inline: 32px;
+  --spacing-button-xs-block: 6px;
+  --spacing-button-sm-block: 10px;
+  --spacing-control-32: 32px;
+  --spacing-control-40: 40px;
+  --spacing-control-50: 50px;
+  --spacing-control-56: 56px;
+  --spacing-button-xs: 32px;
+  --spacing-button-sm: 40px;
+  --spacing-button-default: 50px;
+  --spacing-button-lg: 56px;
+  --spacing-button-icon-16: 16px;
+  --spacing-button-icon-20: 20px;
+  --spacing-button-icon-24: 24px;
+
+  /* Radius and border tokens */
+  --radius-1: 1px;
+  --radius-8: 8px;
+  --radius-100: 100px;
+  --radius-9999: 9999px;
+  --radius-card: 8px;
+  --radius-small-tag: 8px;
+  --radius-button: 100px;
+  --radius-pill: 9999px;
+  --radius-icon-button: 9999px;
+  --border-width-hairline: 1px;
+  --border-width-emphasis: 2px;
+
+  /* Typography tokens */
+  --font-sans: "DM Sans", sans-serif;
+  --font-dm-sans: "DM Sans", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --text-button-xs: 14px;
+  --text-button-xs--line-height: 19.6px;
+  --text-button-xs--letter-spacing: -0.14px;
+  --text-button-sm: 16px;
+  --text-button-sm--line-height: 18.4px;
+  --text-button-sm--letter-spacing: 0px;
+  --text-button-default: 18px;
+  --text-button-default--line-height: 18.9px;
+  --text-button-default--letter-spacing: -0.18px;
+  --text-button-lg: 18px;
+  --text-button-lg--line-height: 18.9px;
+  --text-button-lg--letter-spacing: -0.18px;
+  --text-documentation-title: 44px;
+  --text-documentation-title--line-height: 52.8px;
+  --text-documentation-title--letter-spacing: -0.44px;
+  --text-documentation-section: 18px;
+  --text-documentation-section--line-height: 18.9px;
+  --text-documentation-section--letter-spacing: -0.18px;
+  --text-documentation-note: 14px;
+  --text-documentation-note--line-height: 19.6px;
+  --text-documentation-note--letter-spacing: -0.14px;
+  --tracking-negative-0p14: -0.14px;
+  --tracking-0: 0px;
+  --tracking-negative-0p23: -0.23px;
+  --tracking-negative-0p34: -0.34px;
+  --tracking-negative-0p44: -0.44px;
+  --tracking-negative-0p66: -0.66px;
+  --tracking-negative-1p11: -1.11px;
+  --tracking-negative-4p48: -4.48px;
+  --tracking-negative-0p18: -0.18px;
+  --tracking-negative-0p16: -0.16px;
+  --tracking-caption: -0.14px;
+  --tracking-body-sm: 0px;
+  --tracking-body: 0px;
+  --tracking-body-lg: -0.23px;
+  --tracking-button: -0.18px;
+  --tracking-display: -4.48px;
+  --tracking-heading-lg: -1.11px;
+  --tracking-heading: -0.66px;
+  --tracking-heading-sm: -0.44px;
+  --tracking-subheading: -0.34px;
+  --tracking-navigation: -0.16px;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: "DM Sans", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-background-page);
+  color: var(--color-text-primary);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer components {
+  .button-default {
+    border: 2px solid transparent;
+    background: linear-gradient(var(--color-background-page), var(--color-background-page)) padding-box,
+      linear-gradient(90deg, var(--color-gradient-brand-start), var(--color-gradient-brand-end)) border-box;
+    color: var(--color-action-text);
+  }
+
+  .button-default:hover {
+    background: linear-gradient(var(--color-action-hover-background), var(--color-action-hover-background)) padding-box,
+      linear-gradient(90deg, var(--color-gradient-brand-start), var(--color-gradient-brand-end)) border-box;
+  }
+
+  .button-default:active {
+    background: linear-gradient(var(--color-action-pressed-background), var(--color-action-pressed-background)) padding-box,
+      linear-gradient(90deg, var(--color-gradient-brand-start), var(--color-gradient-brand-end)) border-box;
+  }
+
+  .button-default:disabled {
+    border-color: var(--color-action-disabled-border);
+    background: var(--color-action-background);
+    color: var(--color-text-disabled);
+  }
+}
+
+::selection {
+  background: var(--color-accent-brand);
+  color: var(--color-text-on-callout);
+}
